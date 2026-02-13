@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OK11SECURITY | Ontario Security Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#1a1a1a;color:#f2f2f2;font-family:'Inter',sans-serif;}
+
+nav{
+background:#0f0f0f;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #333;
+}
+
+.logo{
+font-family:'Oswald',sans-serif;
+font-size:30px;
+letter-spacing:4px;
+color:#b58a3c;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#ddd;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#b58a3c;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(to bottom, rgba(0,0,0,.75), rgba(26,26,26,1)),
+url('https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h1{
+font-family:'Oswald',sans-serif;
+font-size:70px;
+letter-spacing:5px;
+}
+
+.hero h2{
+margin-top:15px;
+color:#b58a3c;
+font-weight:400;
+}
+
+.hero p{
+margin-top:20px;
+max-width:700px;
+color:#ccc;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 40px;
+background:#b58a3c;
+border:none;
+color:#111;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+background:#8f6c2e;
+}
+
+section{padding:80px 8%;}
+
+.section-title{
+text-align:center;
+font-family:'Oswald',sans-serif;
+font-size:40px;
+margin-bottom:50px;
+color:#b58a3c;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-box{
+background:#242424;
+border:1px solid #333;
+transition:.3s;
+}
+
+.service-box:hover{
+transform:translateY(-6px);
+border-color:#b58a3c;
+}
+
+.service-box img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.service-box h3{
+padding:20px 20px 10px;
+font-family:'Oswald',sans-serif;
+}
+
+.service-box p{
+padding:0 20px 20px;
+color:#ccc;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border:3px solid #b58a3c;
+}
+
+.about p{margin-bottom:15px;color:#ccc;}
+
+.coverage{
+background:#242424;
+text-align:center;
+padding:60px;
+border:1px solid #333;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+padding:14px;
+background:#2a2a2a;
+border:1px solid #444;
+color:#fff;
+}
+
+input:focus,textarea:focus{
+outline:none;
+border-color:#b58a3c;
+}
+
+footer{
+background:#0f0f0f;
+padding:30px;
+text-align:center;
+color:#777;
+margin-top:60px;
+}
+
+@media(max-width:900px){
+.about{grid-template-columns:1fr;}
+.hero h1{font-size:48px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">OK11SECURITY</div>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#coverage">Coverage</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<h1>OK11SECURITY</h1>
+<h2>Strength. Vigilance. Trust.</h2>
+<p>Licensed & Insured Security Services Operating Across Ontario, Canada. Professional protection for people, property and events.</p>
+<button class="btn">Request Protection</button>
+</div>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+
+<div class="service-box">
+<img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<h3>Event Security</h3>
+<p>Professional crowd management and risk prevention for events of all sizes.</p>
+</div>
+
+<div class="service-box">
+<img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<h3>Construction Site Security</h3>
+<p>24/7 protection preventing theft, vandalism and trespassing.</p>
+</div>
+
+<div class="service-box">
+<img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<h3>Mobile Patrol</h3>
+<p>Highly visible patrol presence ensuring rapid response and deterrence.</p>
+</div>
+
+<div class="service-box">
+<img src="https://images.pexels.com/photos/8438923/pexels-photo-8438923.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<h3>VIP / Executive Protection</h3>
+<p>Discreet and highly trained personal protection services.</p>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About OK11SECURITY</h2>
+<div class="about">
+<div>
+<p>With 1 year of operational experience in Ontario, OK11SECURITY delivers disciplined, reliable and professional security services.</p>
+<p>✔ Licensed & Insured<br>
+✔ Fully Trained Guards<br>
+✔ 24/7 Availability<br>
+✔ Rapid Deployment</p>
+</div>
+<img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1200">
+</div>
+</section>
+
+<section id="coverage">
+<h2 class="section-title">Service Coverage</h2>
+<div class="coverage">
+Operating Across Ontario, Canada<br><br>
+Toronto • Mississauga • Brampton • Hamilton • Ottawa • Surrounding Areas
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Request a Quote</h2>
+
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Service Needed">
+<textarea rows="5" placeholder="Project Details"></textarea>
+<button class="btn" type="submit">Submit Request</button>
+</form>
+
+<p style="text-align:center;margin-top:30px;">
+Phone: Coming Soon<br>
+WhatsApp: Coming Soon
+</p>
+
+</section>
+
+<footer>
+© 2026 OK11SECURITY | Ontario, Canada | Licensed & Insured
+</footer>
+
+</body>
+</html>
