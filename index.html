@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -46,7 +47,7 @@ color:#b58a3c;
 .hero{
 height:90vh;
 background:
-linear-gradient(to bottom, rgba(0,0,0,.75), rgba(26,26,26,1)),
+linear-gradient(to bottom, rgba(0,0,0,.7), rgba(26,26,26,1)),
 url('https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
 display:flex;
 flex-direction:column;
@@ -173,6 +174,13 @@ outline:none;
 border-color:#b58a3c;
 }
 
+#thankYouMsg{
+display:none;
+text-align:center;
+margin-top:20px;
+color:#b58a3c;
+}
+
 footer{
 background:#0f0f0f;
 padding:30px;
@@ -180,6 +188,9 @@ text-align:center;
 color:#777;
 margin-top:60px;
 }
+
+a{color:#b58a3c;text-decoration:none;}
+a:hover{text-decoration:underline;}
 
 @media(max-width:900px){
 .about{grid-template-columns:1fr;}
@@ -268,7 +279,7 @@ Toronto • Mississauga • Brampton • Hamilton • Ottawa • Surrounding Are
 <section id="contact">
 <h2 class="section-title">Request a Quote</h2>
 
-<form name="quote" method="POST" data-netlify="true" action="/thank-you.html">
+<form name="quote" method="POST" data-netlify="true" id="quoteForm">
   <input type="hidden" name="form-name" value="quote">
 
   <input type="text" name="name" placeholder="Full Name" required>
@@ -279,9 +290,14 @@ Toronto • Mississauga • Brampton • Hamilton • Ottawa • Surrounding Are
   <button class="btn" type="submit">Submit Request</button>
 </form>
 
+<div id="thankYouMsg">
+  <h2>Thank You!</h2>
+  <p>Your request has been submitted successfully. We will contact you shortly.</p>
+</div>
+
 <p style="text-align:center;margin-top:30px;">
 Phone: +1(226) 929-0329<br>
-Email: <a href="mailto:Ravimaansingh@gmail.com" style="color:#b58a3c;">Ravimaansingh@gmail.com</a>
+Email: <a href="mailto:Ravimaansingh@gmail.com">Ravimaansingh@gmail.com</a>
 </p>
 
 </section>
@@ -289,6 +305,21 @@ Email: <a href="mailto:Ravimaansingh@gmail.com" style="color:#b58a3c;">Ravimaans
 <footer>
 © 2026 OK11SECURITY | Ontario, Canada | Licensed & Insured
 </footer>
+
+<script>
+const form = document.getElementById('quoteForm');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch("/", {
+        method: "POST",
+        body: new URLSearchParams(formData),
+    }).then(() => {
+        form.style.display = 'none';
+        document.getElementById('thankYouMsg').style.display = 'block';
+    }).catch((error) => alert("Error submitting form: "+error));
+});
+</script>
 
 </body>
 </html>
