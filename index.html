@@ -203,7 +203,7 @@ margin-top:60px;
 <h1>OK11SECURITY</h1>
 <h2>Strength. Vigilance. Trust.</h2>
 <p>Licensed & Insured Security Services Operating Across Ontario, Canada. Professional protection for people, property and events.</p>
-<button class="btn">Request Protection</button>
+<button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Request Protection</button>
 </div>
 
 <section id="services">
@@ -234,6 +234,12 @@ margin-top:60px;
 <p>Discreet and highly trained personal protection services.</p>
 </div>
 
+<div class="service-box">
+<img src="https://images.pexels.com/photos/4386461/pexels-photo-4386461.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<h3>Residential Security</h3>
+<p>Reliable, professional protection for homes and residential properties.</p>
+</div>
+
 </div>
 </section>
 
@@ -262,17 +268,20 @@ Toronto • Mississauga • Brampton • Hamilton • Ottawa • Surrounding Are
 <section id="contact">
 <h2 class="section-title">Request a Quote</h2>
 
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="text" placeholder="Service Needed">
-<textarea rows="5" placeholder="Project Details"></textarea>
-<button class="btn" type="submit">Submit Request</button>
+<form name="quote" method="POST" data-netlify="true" action="/thank-you.html">
+  <input type="hidden" name="form-name" value="quote">
+
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="text" name="service" placeholder="Service Needed">
+  <textarea name="message" rows="5" placeholder="Project Details"></textarea>
+  
+  <button class="btn" type="submit">Submit Request</button>
 </form>
 
 <p style="text-align:center;margin-top:30px;">
-Phone: Coming Soon<br>
-WhatsApp: Coming Soon
+Phone: +1(226) 929-0329<br>
+Email: <a href="mailto:Ravimaansingh@gmail.com" style="color:#b58a3c;">Ravimaansingh@gmail.com</a>
 </p>
 
 </section>
